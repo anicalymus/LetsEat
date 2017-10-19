@@ -20,3 +20,7 @@ delete '/sessions/:id' do
 	redirect '/sessions/new'
 end
 
+get '/sessions/new' do
+  "Hello World"
+end
+
