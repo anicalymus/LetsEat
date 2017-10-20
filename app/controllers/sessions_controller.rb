@@ -9,7 +9,7 @@ post '/sessions' do
 		session[:id] = @user.id
 		redirect "/users/#{@user.id}"
 	else
-		@errors = ["Invalid email and or password"]
+		@errors = ["Invalid email and/or password"]
 		erb :'sessions/new'
 	end
 end
@@ -17,10 +17,10 @@ end
 #logout
 delete '/sessions/:id' do
 	session[:id] = nil
-	redirect '/sessions/new'
+	redirect '/'
 end
 
-get '/sessions/new' do
-  "Hello World"
-end
+# get '/sessions/new' do
+#   "Hello World"
+# end
 

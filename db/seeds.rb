@@ -9,7 +9,7 @@ users = 5.times do
 
 
 ingredients = 5.times do
-	Ingredient.create(name: Faker::Food.name)
+	Ingredient.create(name: Faker::Food.ingredient)
 
 
 		Recipe.create(name: Faker::Food.recipe)

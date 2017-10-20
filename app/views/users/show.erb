@@ -2,7 +2,18 @@
 
 
 
+<h2>Please enter your ingredient here:</h2>
+
+
+<form action='/recipes' method="POST">
+	<input type='text' name='ingredient' placeholder='Ingredient'>
+	<input type='submit' value="Get me a recipe!">
+</form>
+<br>
+<br>
+<br>
 <form action='/sessions/<%= @user.id %>' method="POST">
 	<input type='hidden' name='_method' value="DELETE">
 	<button type='submit'>Logout</button>
 </form>
+
