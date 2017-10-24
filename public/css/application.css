@@ -1,0 +1,15 @@
+/*#logout-button {
+	 float: right;
+
+}*/
+
+#welcome-page {
+	text-align: center;
+	font-family: monaco;
+	font-size: 25px;
+}
+
+body {
+	background-image: url("/letseat/image/utensils.png") no-repeat center fixed; 
+    background-size: cover;
+}

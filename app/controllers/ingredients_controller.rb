@@ -1,4 +1,6 @@
 # post '/ingredients' do
-# 	@ingredients = Ingredients.new
+# 	@ingredient = Ingredients.find(params[:name])
 # 	erb :'ingredients/index'
 # end
+
+
