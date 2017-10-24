@@ -1,6 +1,11 @@
-get '/recipes/new'
-	erb :'recipes/new'
-
 post '/recipes' do
-  @recipe = Recipe.all
+	erb :'recipes/show'
 end
+
+# get '/recipes' do
+#   if @ingredient = params[:ingredient]
+#     redirect "/recipes"
+#   else
+#     @recipe = Food2ForkAdapter.get_recipes(ingredient)
+#   end
+# end
