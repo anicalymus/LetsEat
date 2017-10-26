@@ -10,6 +10,11 @@
 }
 
 body {
-	background-image: url("/letseat/image/utensils.png") no-repeat center fixed; 
+	background-image: url("/images/food.jpg");
     background-size: cover;
+}
+
+
+button {
+	border-radius: 4px;
 }

@@ -1,12 +1,11 @@
 <h2>Returning User Login</h2>
 
-<form action='/sessions' method="POST">
-	<input type='text' name='email' placeholder='Email'>
-	<input type='password' name='password' placeholder='Password'>
-	<input type='submit' value="Login">
+<form action="/sessions" method="POST">
+	<input type="text" name="email" placeholder="Email">
+	<input type="password" name="password" placeholder="Password">
+	<input type="submit" value="Login">
 </form>
 <br>
-
 <ul>
 	<% if @errors %>
 	<% @errors.each do |error| %>
@@ -16,9 +15,8 @@
 </ul>
 
 <h2>New User Sign Up!</h2>
-<form action='/users/new' method="GET">
-	<button type='submit'>Sign Up!</button>
+<form action="/users/new" method="GET">
+	<button type="submit">Sign Up!</button>
 </form>
-<br>
 
 
