@@ -1,9 +1,9 @@
-get "/sessions" do
+get "/sessions/new" do
 	erb :"sessions/new"
 end
 
 #login
-post "/sessions" do
+post "/sessions/new" do
 	@user = User.find_by_email(params[:email])
 	if @user && @user.password == params[:password]
 		session[:id] = @user.id

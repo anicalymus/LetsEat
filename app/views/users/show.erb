@@ -11,7 +11,7 @@
 </form>
 <br>
 <br>
-<h2>Saved recipe/s:</h2>
+<h2>Your saved recipe/s:</h2>
 <ul>
 	<% if @saved_recipes %>
 	<% @saved_recipes.each do |saved_recipe| %>
@@ -21,7 +21,7 @@
 </ul>
 <br>
 <br>
-<form action='/sessions/<%= @user.id %>' method="POST" id="logout-button">
+<form action='/sessions/<%= @user.id %>' method="POST">
 	<input type='hidden' name='_method' value="DELETE">
 	<button type='submit'>Logout</button>
 </form>
