@@ -3,9 +3,8 @@ post "/recipes" do
 end
 
 get "/recipes" do
-  if @ingredient = params[:ingredient]
+  @search = params[:ingredient] 
     redirect "/recipes"
-  else
-    @recipe = Food2ForkAdapter.get_recipes(ingredient)
-  end
+ 
+  @recipe = Food2ForkAdapter.get_recipes(ingredient)
 end
