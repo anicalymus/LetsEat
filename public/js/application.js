@@ -12,21 +12,21 @@ var loginSubmit = function(){
 
 		var loginSubmit = $(this);
 		var url = loginSubmit.attr("action");
-		var method = loginSubmit.attr("method");
+		// var method = loginSubmit.attr("method");
 		var data = loginSubmit.serialize();
-		$loginSubmit.find('.login-submit').attr('value')
+		// $loginSubmit.find('.login-submit').attr('value')
 
 		var request = $.ajax({
 			url: url,
-			method: method,
+			method: 'post',
 			data: data
 		})
 		request.done(function(response){
-			form.before(response);
+			$('login-submit').replaceWith(response);
 		})
-		request.fail(function(error){
-		})
-		$loginSubmit.parent().find('.login-submit').text(response);
+		// request.fail(function(error){
+		// })
+		// $loginSubmit.parent().find('.login-submit').text(response);
 	})
 };
 
