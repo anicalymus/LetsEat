@@ -111,7 +111,7 @@ DEPENDENCIES
   factory_girl
   faker
   faraday
-  httparty (~> 0.13.7)
+  httparty
   pg
   pry-byebug
   rack-test
