@@ -13,7 +13,7 @@ gem 'activerecord', '~>5.1.2'
 gem 'rake'
 gem 'bcrypt'
 gem 'faraday'
-gem 'httparty', '~> 0.13.7'
+gem 'httparty'
 
 gem 'shotgun', '~>0.9.1'
 gem 'dotenv'
