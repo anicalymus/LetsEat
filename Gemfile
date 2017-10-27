@@ -14,6 +14,7 @@ gem 'rake'
 gem 'bcrypt'
 gem 'faraday'
 gem 'httparty'
+gem 'awesome_print'
 
 gem 'shotgun', '~>0.9.1'
 gem 'dotenv'

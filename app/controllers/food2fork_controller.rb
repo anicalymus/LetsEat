@@ -1,5 +1,6 @@
-get 'recipes/:search_term' do 
+get '/recipes/search' do 
 	@food2fork_adapter = Food2forkAdapter.new
-	p @food2fork_adapter.search_recipes('/search')
-	# @food2fork_adapter.search_recipes(params[:search_recipes])
+	# @food2fork_adapter.search_recipes('/search')
+	@recipe_data = @food2fork_adapter.search_recipes(params[:ingredient])
+	@recipes = @food2fork_adapter.parse_recipes(@recipe_data)
 end

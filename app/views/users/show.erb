@@ -5,13 +5,13 @@
 <h2>Please enter your ingredient here:</h2>
 
 
-<form action='/recipes' method="GET">
+<form action='/recipes/search' method="GET">
 	<input type='text' name='ingredient' placeholder='Ingredient'>
 	<input type='submit' value="Get me a recipe!">
 </form>
 <br>
 <br>
-<h2>Your saved recipe/s:</h2>
+<!-- <h2>Your saved recipe/s:</h2>
 <ul>
 	<% if @saved_recipes %>
 	<% @saved_recipes.each do |saved_recipe| %>
@@ -20,7 +20,7 @@
 <% end %>
 </ul>
 <br>
-<br>
+<br> -->
 <form action='/sessions/<%= @user.id %>' method="POST">
 	<input type='hidden' name='_method' value="DELETE">
 	<button type='submit'>Logout</button>
