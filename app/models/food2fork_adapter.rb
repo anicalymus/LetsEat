@@ -15,8 +15,12 @@ class Food2forkAdapter
   end
 
   def parse_recipes(recipe_data)
-  	p recipe_data['recipes'][0]['image_url']
-  	# debugger
+  	results = []
+  	recipe_data['recipes'].each do |recipe|
+  	p recipe 
+  	results << Recipe.create(image_url: recipe['url'], title: recipe['title'], publisher: recipe['publisher'], source_url: recipe['source_url'])
+  	end
+  	results
   end
 end
 

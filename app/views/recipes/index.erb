@@ -1,1 +1,11 @@
 <h2>Here are recipe ideas for your chosen ingredient...Enjoy!</h2>
+
+	<% if @recipes %>
+	<% @recipes.each do |recipe| %>
+	<div>
+		<h2><a href="<%= recipe.source_url %>"> <%= recipe.title %></a></h2>
+		<img src=" <%= recipe.image_url%>">
+
+	</div>
+	<% end %>
+<% end %>
