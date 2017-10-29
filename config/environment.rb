@@ -14,6 +14,8 @@ require 'pathname'
 require 'pg'
 require 'active_record'
 require 'logger'
+require 'faraday'
+require 'httparty'
 
 require 'sinatra'
 require "sinatra/reloader" if development?
@@ -21,6 +23,9 @@ require "sinatra/reloader" if development?
 require 'erb'
 require 'pry-byebug'
 require 'bcrypt'
+
+require 'dotenv'
+Dotenv.load
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))

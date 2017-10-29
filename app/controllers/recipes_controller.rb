@@ -1,11 +1,7 @@
-post '/recipes' do
-	erb :'recipes/show'
-end
+get "/recipes" do
+  @search = params[:ingredient]
+  adapter = Food2forkAdapter.new
+  @recipes = adapter.search_recipes(@search)
 
-# get '/recipes' do
-#   if @ingredient = params[:ingredient]
-#     redirect "/recipes"
-#   else
-#     @recipe = Food2ForkAdapter.get_recipes(ingredient)
-#   end
-# end
+  erb :'recipes/index'
+end

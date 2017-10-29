@@ -1,26 +1,27 @@
-get '/sessions' do
-	erb :'sessions/new'
+get "/sessions/new" do
+	if request.xhr? 
+		erb :'_login_form', layout: false
+	else 
+		erb :"sessions/new"
+	end 
 end
 
 #login
-post '/sessions' do
+post "/sessions/new" do
 	@user = User.find_by_email(params[:email])
 	if @user && @user.password == params[:password]
 		session[:id] = @user.id
 		redirect "/users/#{@user.id}"
 	else
 		@errors = ["Invalid email and/or password"]
-		erb :'sessions/new'
+		erb :"sessions/new"
 	end
 end
 
 #logout
-delete '/sessions/:id' do
+delete "/sessions/:id" do
 	session[:id] = nil
-	redirect '/'
+	redirect "/"
 end
 
-# get '/sessions/new' do
-#   "Hello World"
-# end
 

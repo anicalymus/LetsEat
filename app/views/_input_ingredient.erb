@@ -1,0 +1,11 @@
+<h1>Welcome, <%= @user.first_name.capitalize %>!</h1>
+
+
+
+<h2>Please enter your ingredient here:</h2>
+
+
+<form action='/recipes' class="input-ingredient" method="POST">
+	<input type='text' name='ingredient' placeholder='Ingredient'>
+	<input type='submit' value="Get me a recipe!">
+</form>
